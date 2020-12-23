@@ -1,8 +1,8 @@
 .bg {
     background-image: url('../img/bg.png');
     background-repeat: no-repeat;
-    width: 800px;
-    height: 1200px;
+    width: 600px;
+    height: 833px;
 }
 
 .box-minh {
@@ -16,4 +16,16 @@
     width: 100%;
     background-color: #A1A1A1;
     height: 1px;
+}
+
+.complete {
+    background-image: url('../img/completed.png');
+    background-repeat: no-repeat;
+    width: 90%;
+    background-position: center;
+    min-height: 280px;
+}
+
+.tick {
+    font-size: 10rem;
 }
