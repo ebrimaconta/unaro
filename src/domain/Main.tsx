@@ -37,8 +37,10 @@ export default class Main extends Component<Props, State> {
       email: this.state.email,
       nominated: this.state.nominated,
     };
+
     data.post('/data.json', Data).then((res) => {
-      window.location.href = '/completed';
+      console.log(res.data);
+      /* window.location.href = '/completed'; */
     });
   }
   render() {
@@ -53,6 +55,7 @@ export default class Main extends Component<Props, State> {
                 <div className='mt-3  text-xl flex-col flex items-center justify-center  '>
                   <div className='mb-4  w-72'>
                     <input
+                      required
                       type='text'
                       placeholder='Forename'
                       className='w-full'
@@ -65,6 +68,7 @@ export default class Main extends Component<Props, State> {
                   </div>
                   <div className='mb-4 w-72 '>
                     <input
+                      required
                       type='text'
                       placeholder='Surname'
                       value={this.state.surname}
@@ -75,34 +79,35 @@ export default class Main extends Component<Props, State> {
                     />
                     <hr className='bb-hr ' />
                   </div>
-                  <div className='mb-4 w-72 '>
-                    <input
-                      type='text'
-                      placeholder='Date of Birth:   DD/MM/YYYY '
-                      value={this.state.dob}
-                      onChange={(e) => {
-                        this.setState({ dob: e.target.value });
-                      }}
-                      className='w-full'
-                    />
+                  <div className='mb-4 w-72 text-td '>
+                    <div className='flex justify-between'>
+                      <div className=''>Date of Birth:</div>
+                      <input
+                        required
+                        type='date'
+                        placeholder='DD/MM/YYYY'
+                        value={this.state.dob}
+                        onChange={(e) => {
+                          this.setState({ dob: e.target.value });
+                        }}
+                        className='dob-input'
+                      />
+                    </div>
                     <hr className='bb-hr ' />
                   </div>
                   <div className='mb-4  w-72 text-td '>
                     <div className='flex justify-between'>
                       <div className=''>Gender</div>
                       <select
+                        required
                         name=''
                         id=''
                         value={this.state.gender}
                         onChange={(e) => {
-                          var value = e.target.value;
-                          console.log(value, ' was selected');
                           this.setState({ gender: e.target.value });
                         }}
                       >
-                        <option selected value='Male'>
-                          Male
-                        </option>
+                        <option value='Male'>Male</option>
                         <option value='Female'>Female</option>
                       </select>
                     </div>
@@ -110,7 +115,8 @@ export default class Main extends Component<Props, State> {
                   </div>
                   <div className='mb-4 w-72 '>
                     <input
-                      type='text'
+                      required
+                      type='email'
                       placeholder='Email'
                       value={this.state.email}
                       onChange={(e) => {
@@ -126,6 +132,7 @@ export default class Main extends Component<Props, State> {
                   </div>
                   <div className='flex flex-row w-3/5 justify-start my-10 '>
                     <input
+                      required
                       type='radio'
                       name='pharmacy'
                       value='in'
@@ -136,6 +143,7 @@ export default class Main extends Component<Props, State> {
                     />
                     <div className='text-td'>Yes</div>
                     <input
+                      required
                       type='radio'
                       name='pharmacy'
                       value='out'

@@ -60,15 +60,19 @@ export default class Main extends Component<Props, State> {
                 <th>Opt Status</th>
               </tr>
 
-              {this.state.result.map((info) => {
+              {this.state.result.map((info, index) => {
+                let splitDate = info.dob.split('-');
                 return (
-                  <tr className='h-20'>
+                  <tr key={index} className='h-20'>
                     <td>
                       {info.forename} {info.surname}{' '}
                     </td>
                     <td> {info.email} </td>
                     <td> {info.gender} </td>
-                    <td> {info.dob} </td>
+                    <td>
+                      {' '}
+                      {splitDate[2]}/{splitDate[1]}/{splitDate[0]}
+                    </td>
                     <td> opted {info.nominated} </td>
                   </tr>
                 );

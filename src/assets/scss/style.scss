@@ -24,6 +24,17 @@
     height: 317px;
 }
 
+.dob-input {
+    width: 47%;
+    text-transform: uppercase;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
 .box-minh {
     min-height: 500px;
 }
