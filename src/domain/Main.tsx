@@ -53,7 +53,7 @@ export default class Main extends Component<Props, State> {
               <div className='text-sc'>Connect with email </div>
               <form onSubmit={this.postHandler}>
                 <div className='mt-3  text-xl flex-col flex items-center justify-center  '>
-                  <div className='mb-4  w-72'>
+                  <div className='mb-4  w-48 lg:w-72'>
                     <input
                       required
                       type='text'
@@ -66,7 +66,7 @@ export default class Main extends Component<Props, State> {
                     />
                     <hr className='bb-hr' />
                   </div>
-                  <div className='mb-4 w-72 '>
+                  <div className='mb-4 w-48 lg:w-72 '>
                     <input
                       required
                       type='text'
@@ -79,8 +79,8 @@ export default class Main extends Component<Props, State> {
                     />
                     <hr className='bb-hr ' />
                   </div>
-                  <div className='mb-4 w-72 text-td '>
-                    <div className='flex justify-between'>
+                  <div className='mb-4 w-48 lg:w-72  text-td '>
+                    <div className='flex justify-between  flex-col lg:flex-row '>
                       <div className=''>Date of Birth:</div>
                       <input
                         required
@@ -95,8 +95,8 @@ export default class Main extends Component<Props, State> {
                     </div>
                     <hr className='bb-hr ' />
                   </div>
-                  <div className='mb-4  w-72 text-td '>
-                    <div className='flex justify-between'>
+                  <div className='mb-4 w-48 lg:w-72   text-td '>
+                    <div className='flex flex-col  lg:flex-row justify-between'>
                       <div className=''>Gender</div>
                       <select
                         required
@@ -113,7 +113,7 @@ export default class Main extends Component<Props, State> {
                     </div>
                     <hr className='bb-hr ' />
                   </div>
-                  <div className='mb-4 w-72 '>
+                  <div className='mb-4 w-48 lg:w-72 '>
                     <input
                       required
                       type='email'
