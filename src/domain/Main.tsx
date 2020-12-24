@@ -39,8 +39,7 @@ export default class Main extends Component<Props, State> {
     };
 
     data.post('/data.json', Data).then((res) => {
-      console.log(res.data);
-      /* window.location.href = '/completed'; */
+      window.location.href = '/completed';
     });
   }
   render() {
