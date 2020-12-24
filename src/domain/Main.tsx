@@ -20,9 +20,9 @@ export default class Main extends Component<Props, State> {
       forename: '',
       surname: '',
       dob: '',
-      gender: '',
+      gender: 'Male',
       email: '',
-      nominated: '',
+      nominated: 'out',
     };
     this.postHandler = this.postHandler.bind(this);
   }
@@ -87,16 +87,25 @@ export default class Main extends Component<Props, State> {
                     />
                     <hr className='bb-hr ' />
                   </div>
-                  <div className='mb-4  w-72'>
-                    <input
-                      type='text'
-                      placeholder='Gender'
-                      value={this.state.gender}
-                      onChange={(e) => {
-                        this.setState({ gender: e.target.value });
-                      }}
-                      className='w-full'
-                    />
+                  <div className='mb-4  w-72 text-td '>
+                    <div className='flex justify-between'>
+                      <div className=''>Gender</div>
+                      <select
+                        name=''
+                        id=''
+                        value={this.state.gender}
+                        onChange={(e) => {
+                          var value = e.target.value;
+                          console.log(value, ' was selected');
+                          this.setState({ gender: e.target.value });
+                        }}
+                      >
+                        <option selected value='Male'>
+                          Male
+                        </option>
+                        <option value='Female'>Female</option>
+                      </select>
+                    </div>
                     <hr className='bb-hr ' />
                   </div>
                   <div className='mb-4 w-72 '>
@@ -130,6 +139,7 @@ export default class Main extends Component<Props, State> {
                       type='radio'
                       name='pharmacy'
                       value='out'
+                      checked
                       onChange={(e) => {
                         this.setState({ nominated: e.target.value });
                       }}
