@@ -6,7 +6,52 @@
 }
 
 .box-minh {
-    min-height: 700px;
+    min-height: 500px;
+}
+
+.blue {
+    color: #4176FF;
+}
+
+.shape {
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 4px -2px #888;
+    z-index: 100;
+    position: absolute;
+}
+
+.rec {
+    width: 81%;
+    position: absolute;
+    height: 76px;
+    background-color: white;
+    top: 0px;
+    right: 0px;
+    box-shadow: 3px 3px #E5E5E5;
+}
+
+.admin-grey {
+    background-color: #E5E5E5;
+    height: 100vh;
+    background-image: url('../img/menu.png');
+}
+
+.admin-footer {
+    border-top: solid 3px #E5E5E5;
+}
+
+.admin-content {
+    width: 79%;
+    position: absolute;
+    height: 66%;
+    top: 95px;
+    right: 0px;
+}
+
+th {
+    font-weight: normal;
 }
 
 .bb-hr {
